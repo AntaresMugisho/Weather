@@ -1,0 +1,25 @@
+
+// Assure responsive design according to the device sizes
+// var string $device : possibles values are 
+// mobile, tablet, laptop and desktop
+// This function will find the the device size as stored in $breakpoint map 
+@mixin breakpoint($device){
+    @media screen and (max-width:map-get($breakpoint, $device)){
+        @content;
+    }
+}
+
+// Fit background image to cover
+@mixin fit_background{
+    background-repeat:no-repeat;
+    background-position:center;
+    background-size:cover;
+}
+
+// Display flex center x and y
+@mixin flex_cc($direction : row){
+    display:flex;
+    flex-direction:$direction;
+    justify-content: center;
+    align-items: center;
+}

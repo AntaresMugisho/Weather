@@ -1,0 +1,36 @@
+
+// VARS
+
+// Colors
+$primary_color:#0e874c;
+$secondary_color:#d6d6d6;
+$accent_color:#faf6af;
+
+// Fonts
+$title:"Ubuntu", sans-serif;
+$normal:"Roboto", sans-serif;
+
+// Margins
+$margin:5%;
+
+// Durations
+$tr_duration : .3s;
+
+
+// LISTS & MAPS
+
+//Font size
+$font_size:(
+    level_1: 8rem,
+    level_2: 5.56rem,
+    level_3: 3.4rem,
+    normal: 2.4rem,
+);
+
+// Breakpoints
+$breakpoint: (
+    mobile: 480px,
+    tablet: 768px,
+    laptop: 978px,
+    desktop: 1024px
+    );

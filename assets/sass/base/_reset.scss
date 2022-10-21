@@ -1,0 +1,30 @@
+
+
+*, 
+::before,
+::after{ 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+a{
+    text-decoration: none;
+}
+
+nav ul{
+    list-style-type: none;
+}
+
+input[type="reset"], 
+input[type="submit"], 
+input[type="button"],
+button{
+    border:none;
+    outline: none;
+    cursor:pointer;
+}
