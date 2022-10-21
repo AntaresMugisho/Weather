@@ -45,3 +45,20 @@ html {
     font-size: 37.5%;
   }
 }
+
+main {
+  height: 80vh;
+}
+
+.copyright {
+  font-size: 2.4rem;
+}
+.copyright span {
+  font-family: CreativeMind;
+  font-size: 3.4rem;
+}
+
+h2 {
+  color: red;
+  font-family: "Roboto", sans-serif;
+}
