@@ -102,24 +102,24 @@ footer {
   opacity: 0.5;
 }
 
-section .main-title {
+section.header .main-title {
   font-size: 2.4rem;
   font-weight: 200;
 }
-section .tabs {
+section.header .tabs {
   margin: 20px 0;
   display: flex;
   gap: 8px;
 }
-section .tab {
+section.header .tab {
   padding: 8px 16px;
   font-size: 2rem;
   transition: background-color 0.3s;
 }
-section .tab:hover {
+section.header .tab:hover {
   background-color: #fff1d8;
 }
-section .tab.active {
+section.header .tab.active {
   background-color: #fff1d8;
   border-bottom: 4px inset #f19d00;
 }
