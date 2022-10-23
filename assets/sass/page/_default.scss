@@ -1,6 +1,68 @@
 
 
-h2{
-    color:red;
-    font-family: $title;
+section{
+    .main-title{
+        font-size: fontSize(level_4);
+        font-weight: 200;
+        
+    }
+
+    .tabs{
+        margin: 20px 0;
+        display: flex;
+        gap:8px;
+    }
+
+    .tab{
+        padding:8px 16px;
+        font-size: fontSize(normal);
+        transition: background-color $tr_duration;
+
+        &:hover{
+            background-color: lighten($secondary_color, 45%);
+        }
+        
+        &.active{
+            background-color: lighten($secondary_color, 45%);
+            border-bottom: 4px inset $secondary_color;
+        }
+    }
+}
+
+section.content{
+    @include flex_start(column);
+    gap:24px;
+    margin: 24px 0;
+
+    .date{
+        font-size: fontSize(level_4);
+        color: $primary-color;
+
+        &::after{
+            content:"";
+            display: block;
+            height: 4px;
+            width:40%;
+            background-color:$secondary_color;
+        }
+    }
+
+    .description{
+        font-size: fontSize(normal);
+    }
+
+    .card{
+        @include flex_start();
+        gap:1rem;
+        margin:16px 0;
+        border:1px solid lighten($primary-color, 70%);
+
+        p{
+            font-size: fontSize(normal);
+        }
+
+        .temp{
+            font-size: fontSize(level_2);
+        }
+    }
 }

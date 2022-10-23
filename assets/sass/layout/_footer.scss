@@ -1,6 +1,7 @@
 
 footer{
     @include flex_center();
+    gap:16px;
     background-color: $primary-color;
     color:#fff;
     padding: 20px $marge;
@@ -8,8 +9,11 @@ footer{
 
 .copyright{
     font-size: 1.8rem;
-    span{
-        font-family: CreativeMind;
-        font-size: fontSize(level_3);
-    }
+    font-weight: 200;
+}
+
+.creative-mind{
+    font-family: CreativeMind;
+    font-size: fontSize(level_3);
+    opacity:.5;
 }
