@@ -1,7 +1,13 @@
 
+footer{
+    @include flex_center();
+    background-color: $primary-color;
+    color:#fff;
+    padding: 20px $marge;
+}
 
 .copyright{
-    font-size: fontSize(normal);
+    font-size: 1.8rem;
     span{
         font-family: CreativeMind;
         font-size: fontSize(level_3);

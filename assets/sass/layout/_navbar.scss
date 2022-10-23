@@ -1,0 +1,32 @@
+
+
+nav{
+    background-color: $primary-color;
+    position:fixed;
+    width:100%;
+    padding:20px $marge;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-brand{
+    font-size: fontSize(normal);
+    font-weight:700;
+    color:$secondary_color;
+
+    span{
+        font-weight: 300;
+        color:#fff;
+    }
+}
+
+.nav-link{
+    color:rgba(255, 255, 255, 0.678);
+    font-size: 2rem;
+    transition: color $tr_duration;
+
+    &:hover{
+        color:#fff;
+    }
+}

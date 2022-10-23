@@ -17,7 +17,7 @@
 }
 
 // Display flex center x and y
-@mixin flex_cc($direction : row){
+@mixin flex_center($direction : row){
     display:flex;
     flex-direction:$direction;
     justify-content: center;
