@@ -1,16 +1,22 @@
 
 
 section.header{
-
+    
     .main-title{
-    font-size: fontSize(level_4);
-    font-weight: 200;
+        font-size: fontSize(level_4);
+        font-weight: 200;
     }
 
     .tabs{
         margin: 20px 0;
         display: flex;
         gap:8px;
+
+        @include breakpoint(mobile){
+            width:100%;
+            overflow-x: scroll;
+            // overflow: hidden;
+        }
     }
 
     .tab{
@@ -33,6 +39,7 @@ section.content{
     @include flex_start(column);
     gap:24px;
     margin: 24px 0;
+    margin:0;
 
     .date{
         font-size: fontSize(level_4);
@@ -49,13 +56,19 @@ section.content{
 
     .description{
         font-size: fontSize(normal);
+        padding:12px;
+        background-color: lighten($secondary_color, 46%);
     }
 
     .card{
         @include flex_start();
         gap:1rem;
-        margin:16px 0;
         border:1px solid lighten($primary-color, 70%);
+
+        @include breakpoint(mobile){
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+        }
 
         p{
             font-size: fontSize(normal);

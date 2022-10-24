@@ -56,9 +56,14 @@ nav {
   justify-content: space-between;
   align-items: center;
 }
+@media screen and (max-width: 480px) {
+  nav {
+    padding: 20px 5%;
+  }
+}
 
 .nav-brand {
-  font-size: 2rem;
+  font-size: 3.4rem;
   font-weight: 700;
   color: #f19d00;
 }
@@ -75,9 +80,42 @@ nav {
 .nav-link:hover {
   color: #fff;
 }
+@media screen and (max-width: 480px) {
+  .nav-link {
+    display: none;
+  }
+}
+
+.humburger {
+  display: none;
+}
+@media screen and (max-width: 480px) {
+  .humburger {
+    display: block;
+    width: 20px;
+    height: 20px;
+    padding-top: 2px;
+    text-align: center;
+    border-radius: 50%;
+    color: #fff;
+    background-color: rgba(255, 255, 255, 0.24);
+    font-size: 2.4rem;
+    transition: background-color 0.3s;
+  }
+  .humburger:hover {
+    background-color: #fff;
+    color: #3b3b3b;
+  }
+}
 
 main {
-  padding: 10rem 10% 0;
+  padding: 15rem 10% 0;
+  height: 90vh;
+}
+@media screen and (max-width: 480px) {
+  main {
+    padding: 15rem 5% 0;
+  }
 }
 
 footer {
@@ -85,10 +123,18 @@ footer {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  gap: 16px;
+  gap: 1.6rem;
   background-color: #3b3b3b;
   color: #fff;
-  padding: 20px 10%;
+  padding: 2rem 10%;
+}
+@media screen and (max-width: 480px) {
+  footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 }
 
 .copyright {
@@ -111,6 +157,12 @@ section.header .tabs {
   display: flex;
   gap: 8px;
 }
+@media screen and (max-width: 480px) {
+  section.header .tabs {
+    width: 100%;
+    overflow-x: scroll;
+  }
+}
 section.header .tab {
   padding: 8px 16px;
   font-size: 2rem;
@@ -131,6 +183,7 @@ section.content {
   align-items: start;
   gap: 24px;
   margin: 24px 0;
+  margin: 0;
 }
 section.content .date {
   font-size: 2.4rem;
@@ -145,6 +198,8 @@ section.content .date::after {
 }
 section.content .description {
   font-size: 2rem;
+  padding: 12px;
+  background-color: #fff3dd;
 }
 section.content .card {
   display: flex;
@@ -152,8 +207,13 @@ section.content .card {
   justify-content: start;
   align-items: center;
   gap: 1rem;
-  margin: 16px 0;
   border: 1px solid #eeeeee;
+}
+@media screen and (max-width: 480px) {
+  section.content .card {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
 }
 section.content .card p {
   font-size: 2rem;

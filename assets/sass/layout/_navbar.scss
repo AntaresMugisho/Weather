@@ -8,10 +8,14 @@ nav{
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    @include breakpoint(mobile){
+        padding:20px 5%;
+    }
 }
 
 .nav-brand{
-    font-size: fontSize(normal);
+    font-size: fontSize(level_3);
     font-weight:700;
     color:$secondary_color;
 
@@ -28,5 +32,31 @@ nav{
 
     &:hover{
         color:#fff;
+    }
+
+    @include breakpoint(mobile){
+        display:none;
+    }
+}
+
+.humburger{
+    display:none;
+
+    @include breakpoint(mobile){
+        display:block;
+        width:20px;
+        height:20px;
+        padding-top:2px;
+        text-align: center;
+        border-radius: 50%;
+        color:#fff;
+        background-color:rgba(255, 255, 255, 0.24);
+        font-size: fontSize(level_4);
+        transition:background-color $tr_duration;
+
+        &:hover{
+            background-color: #fff;
+            color:$primary-color;
+        }
     }
 }

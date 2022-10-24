@@ -1,10 +1,14 @@
 
 footer{
     @include flex_center();
-    gap:16px;
+    gap:1.6rem;
     background-color: $primary-color;
     color:#fff;
-    padding: 20px $marge;
+    padding: 2rem $marge;
+
+    @include breakpoint(mobile){
+        @include flex_center(column);
+    }
 }
 
 .copyright{
