@@ -37,9 +37,8 @@ section.header{
 
 section.content{
     @include flex_start(column);
-    gap:24px;
-    margin: 24px 0;
-    margin:0;
+    gap:3rem;
+    margin: 3rem 0;
 
     .date{
         font-size: fontSize(level_4);
@@ -57,7 +56,10 @@ section.content{
     .description{
         font-size: fontSize(normal);
         padding:12px;
-        background-color: lighten($secondary_color, 46%);
+        @include breakpoint(mobile){
+            background-color: lighten($secondary_color, 46%);
+        }
+        
     }
 
     .card{
@@ -66,8 +68,8 @@ section.content{
         border:1px solid lighten($primary-color, 70%);
 
         @include breakpoint(mobile){
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
+            // display: grid;
+            // grid-template-columns: repeat(4, 1fr);
         }
 
         p{

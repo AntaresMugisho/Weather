@@ -110,7 +110,6 @@ nav {
 
 main {
   padding: 15rem 10% 0;
-  height: 90vh;
 }
 @media screen and (max-width: 480px) {
   main {
@@ -138,7 +137,7 @@ footer {
 }
 
 .copyright {
-  font-size: 1.8rem;
+  font-size: 2rem;
   font-weight: 200;
 }
 
@@ -181,9 +180,8 @@ section.content {
   flex-direction: column;
   justify-content: center;
   align-items: start;
-  gap: 24px;
-  margin: 24px 0;
-  margin: 0;
+  gap: 3rem;
+  margin: 3rem 0;
 }
 section.content .date {
   font-size: 2.4rem;
@@ -199,7 +197,11 @@ section.content .date::after {
 section.content .description {
   font-size: 2rem;
   padding: 12px;
-  background-color: #fff3dd;
+}
+@media screen and (max-width: 480px) {
+  section.content .description {
+    background-color: #fff3dd;
+  }
 }
 section.content .card {
   display: flex;
@@ -208,12 +210,6 @@ section.content .card {
   align-items: center;
   gap: 1rem;
   border: 1px solid #eeeeee;
-}
-@media screen and (max-width: 480px) {
-  section.content .card {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-  }
 }
 section.content .card p {
   font-size: 2rem;
