@@ -1,12 +1,74 @@
-
-
-section.header{
+.hero{
     
-    .main-title{
-        font-size: fontSize(level_4);
-        font-weight: 200;
+    background-image:url(../../images/pexels-lisa-fotios-1107717.jpg);
+    @include fit_background();
+    // background-attachment: fixed;
+    @include flex_start();
+    height:60vh;
+    margin-top: 60px;
+
+    @include breakpoint(mobile){
+        height:auto;
     }
 
+    .main-title{
+        color:#fff;
+        background-color: rgba(0, 0, 0, 0.2);
+        font-size: fontSize(level_2);
+        font-weight: 200;
+        padding: 100% $marge;
+
+        @include breakpoint(mobile){
+            padding: 40px 5%;
+        }
+    }
+}
+
+.form-container{
+    @include flex_center();
+    background-color:#f2f2f2;
+    padding:24px $marge;
+    
+    @include breakpoint(mobile){
+        padding:24px 5%;
+    }
+    
+    .input-control{
+        display:flex;
+        justify-content: space-between;
+        align-items: center;
+        width:90%;
+        min-width:300px;
+        height:40px;
+        padding-left:12px;
+        padding-right:6px;
+        background-color: #fff;
+        box-shadow: 0 1px 2px rgba(51, 51, 51, 0.281);
+        border-radius:20px;
+    }
+
+    input{
+        border:none;
+        outline:none;
+        width:80%;
+    }
+
+    button{
+        background-color:$secondary_color;
+        color:$primary-color;
+        width:30px;
+        height:30px;
+        border-radius:50%;
+        transition: background-color $tr_duration;
+
+        &:hover{
+            background-color:#333;
+        }
+    }
+}
+
+
+section.wrapper{
     .tabs{
         margin: 20px 0;
         display: flex;
@@ -68,8 +130,8 @@ section.content{
         border:1px solid lighten($primary-color, 70%);
 
         @include breakpoint(mobile){
-            // display: grid;
-            // grid-template-columns: repeat(4, 1fr);
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
         }
 
         p{

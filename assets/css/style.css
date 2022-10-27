@@ -1,3 +1,4 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css");
 *,
 ::before,
 ::after {
@@ -50,6 +51,7 @@ html {
 nav {
   background-color: #3b3b3b;
   position: fixed;
+  top: 0;
   width: 100%;
   padding: 20px 10%;
   display: flex;
@@ -108,11 +110,11 @@ nav {
   }
 }
 
-main {
+section {
   padding: 15rem 10% 0;
 }
 @media screen and (max-width: 480px) {
-  main {
+  section {
     padding: 15rem 5% 0;
   }
 }
@@ -147,30 +149,99 @@ footer {
   opacity: 0.5;
 }
 
-section.header .main-title {
-  font-size: 2.4rem;
-  font-weight: 200;
+.hero {
+  background-image: url(../../images/pexels-lisa-fotios-1107717.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+  height: 60vh;
+  margin-top: 60px;
 }
-section.header .tabs {
+@media screen and (max-width: 480px) {
+  .hero {
+    height: auto;
+  }
+}
+.hero .main-title {
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.2);
+  font-size: 5.56rem;
+  font-weight: 200;
+  padding: 100% 10%;
+}
+@media screen and (max-width: 480px) {
+  .hero .main-title {
+    padding: 40px 5%;
+  }
+}
+
+.form-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: #f2f2f2;
+  padding: 24px 10%;
+}
+@media screen and (max-width: 480px) {
+  .form-container {
+    padding: 24px 5%;
+  }
+}
+.form-container .input-control {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  min-width: 300px;
+  height: 40px;
+  padding-left: 12px;
+  padding-right: 6px;
+  background-color: #fff;
+  box-shadow: 0 1px 2px rgba(51, 51, 51, 0.281);
+  border-radius: 20px;
+}
+.form-container input {
+  border: none;
+  outline: none;
+  width: 80%;
+}
+.form-container button {
+  background-color: #f19d00;
+  color: #3b3b3b;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  transition: background-color 0.3s;
+}
+.form-container button:hover {
+  background-color: #333;
+}
+
+section.wrapper .tabs {
   margin: 20px 0;
   display: flex;
   gap: 8px;
 }
 @media screen and (max-width: 480px) {
-  section.header .tabs {
+  section.wrapper .tabs {
     width: 100%;
     overflow-x: scroll;
   }
 }
-section.header .tab {
+section.wrapper .tab {
   padding: 8px 16px;
   font-size: 2rem;
   transition: background-color 0.3s;
 }
-section.header .tab:hover {
+section.wrapper .tab:hover {
   background-color: #fff1d8;
 }
-section.header .tab.active {
+section.wrapper .tab.active {
   background-color: #fff1d8;
   border-bottom: 4px inset #f19d00;
 }
@@ -210,6 +281,12 @@ section.content .card {
   align-items: center;
   gap: 1rem;
   border: 1px solid #eeeeee;
+}
+@media screen and (max-width: 480px) {
+  section.content .card {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
 }
 section.content .card p {
   font-size: 2rem;

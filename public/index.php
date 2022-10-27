@@ -10,6 +10,8 @@
     // $data = json_decode($json);
     $data = file_get_contents("data.txt");
     // $data = json_decode($data);
+
+    
 ?>
 
 <pre>
