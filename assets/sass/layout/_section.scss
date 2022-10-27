@@ -1,9 +1,9 @@
 
 
 section{
-    padding:15rem $marge 0;
+    padding:5rem $marge 0;
 
     @include breakpoint(mobile){
-        padding:15rem 5% 0;
+        padding:5rem 5% 0;
     }
 }

@@ -41,24 +41,41 @@
                 <button class="tab">Jeudi</button>
                 <button class="tab">Vendredi</button>
             </div>
-        </section>
 
-        <section class="content">
-            <p class="date">24 Oct 2022</p>
-            <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. In quam, dignissimos ab amet nesciunt vel error minima provident dolorem repudiandae vitae accusantium ut eaque at suscipit recusandae magni facere sapiente.</p>
+            <div class="container">
+                <h3 class="title">24 Oct 2022</h3>
+                <h3><span class="name">Nuageux &bull;</span>&nbsp;&nbsp;<span class="desc">Ciel dégagé</span></h3>
 
-            <div class="card">
-                <p class="temp">21°C</p>
-                <img src="http://openweathermap.org/img/wn/10d@2x.png" alt="Image montrant l'état actuel des nuages">
-                <!-- <img src="../../images/icon.webp" alt="Image montrant l'état actuel des nuages"> -->
-                <p class="feels-like">Ressenti : 23°C</p>
-                <p class="name">Nuageux</p>
-                <p class="feels-like">vent</p>
-                <p class="description">Ciel dégagé</p>
+                <div class="card">
+                                      
+                    <div class="card-header">
+                        <p class="temp">21°C</p>
+                        <!-- <img src="http://openweathermap.org/img/wn/10d@2x.png" alt="Image montrant l'état actuel des nuages"> -->
+                        <img class="icon" src="../../images/icon.webp" alt="Image montrant l'état actuel des nuages">
+                    </div>
+                    
+                    <div class="details">
+                        <p class="feels-like">Ressenti : 23°C</p>
+                        <p class="feels-like">vent : S</p>
+                        <p class="feels-like">Aucun risque de pluie</p>
+                        <p class="feels-like">vent</p>
+                    </div>
+                </div>
+
+                <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. In quam, dignissimos ab amet nesciunt vel error minima provident dolorem repudiandae vitae accusantium ut eaque at suscipit recusandae magni facere sapiente.</p>
             </div>
-
         </section>
 
+        <section class="forecast">
+            <h3 class="title">Prévisions sur 3 heures</h3>
+            <div class="card">
+                <p class="hour">17:00</p>
+                <p class="temp">18°C</p>
+                <img class="icon" src="../../images/icon.webp" alt="Image montrant l'état actuel des nuages">
+                <p class="vent">Vent</p>
+                <p class="feels-like">Aucun risque de pluie</p>
+            </div>
+        </section>
     </main>
 
     <footer>
