@@ -1,7 +1,5 @@
 <?php
 
-
-
     require "../vendor/autoload.php";
     require "../private/index.php";
 
@@ -13,11 +11,8 @@
     $json = file_get_contents("../private/data.json");
     $data = json_decode($json);
 
-   
-?>
+    require_once "../templates/layout.php";
 
-<pre>
-    <?php  var_dump($json);  ?> 
-</pre>
+
     
 
