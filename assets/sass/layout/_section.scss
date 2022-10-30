@@ -7,3 +7,8 @@ section{
         padding:5rem 5% 0;
     }
 }
+
+section:nth-last-child(1){
+    padding-bottom:5rem;
+
+}

@@ -4,7 +4,7 @@ footer{
     gap:1.6rem;
     background-color: $primary-color;
     color:#fff;
-    padding: 2rem $marge;
+    padding: 4rem $marge;
 
     @include breakpoint(mobile){
         @include flex_center(column);

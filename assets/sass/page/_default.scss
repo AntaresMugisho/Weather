@@ -13,12 +13,13 @@
 
     .main-title{
         color:#fff;
-        background-color: rgba(0, 0, 0, 0.2);
-        font-size: fontSize(level_3);
+        font-size: fontSize(level_2);
         font-weight: 300;
-        padding: 100% $marge;
+        padding: 0 $marge;
 
         @include breakpoint(mobile){
+            background-color: rgba(0, 0, 0, 0.2);
+            font-size: fontSize(level_3);  
             padding: 40px 5%;
         }
     }
@@ -74,7 +75,6 @@
 
 .wrapper{
     .tabs{
-        // margin: 20px 0;
         display: flex;
         gap:8px;
 
@@ -101,14 +101,16 @@
 }
 
 section{
+
     .title{
         font-size: fontSize(level_4);
         color: $primary-color;
+        margin-bottom:20px;
 
         &::after{
             content:"";
             display: block;
-            height: 4px;
+            height: 3px;
             width:40%;
             background-color:$secondary_color;
         }
@@ -126,15 +128,6 @@ section{
 
     .desc{
         font-weight: 200;
-    }
-
-    .description{
-        font-size: fontSize(normal);
-        padding:12px;
-        @include breakpoint(mobile){
-            background-color: lighten($secondary_color, 50%);
-            border-radius:6px;
-        }
     }
 
     .card{
@@ -160,18 +153,17 @@ section{
     }
 
     .card .details{
-        // justify-content:space-evenly;
         margin-top:8px;
+        width:100%;
         display:grid;
         grid-template-columns: repeat(3, 1fr);
         gap:5px;
        
-
         div{
             @include flex_center(column);
             font-size: fontSize(normal);
             background-color: #f3f3f3;
-            padding:3px;
+            padding:8px 4px;
             border-radius: 3px;
             height:100%;
 
@@ -179,32 +171,57 @@ section{
                 text-align: center;
             }
         }
-    }   
+    }
+    
+    .description{
+        font-size: fontSize(normal);
+        padding:12px;
+        background-color: lighten($accent_color, 10%);
+        border-radius:6px;
+    }
 }
 
 .forecast{
+    .title{
+        width:max-content;
+    }
+
     .card{
         @include flex_center;
         justify-content: space-between;
-        margin:12px 0;
         display: flex;
-        align-items:flex-start;
-        border-bottom: 1px solid lighten($color: $primary_color, $amount: 50%);
+        align-items:center;
+        gap:2px;
+
+        &:not(:nth-last-child(1)){
+            margin:12px 0;
+            border-bottom: 1px solid lighten($color: $primary_color, $amount: 70%);
+        }
 
         .hour, .temp{
             font-size: fontSize(level_4);
             color:$primary-color;
-            max-width:100px;
+
+            @include breakpoint(mobile){
+                max-width:100px;
+            }
 
             span.description, span.feels-like{
                 display:block;
                 font-size:1.8rem;
                 font-weight:200;
+                margin-top:4px;
             }
         }
 
-        .demo-icon{
-            width:60px;
+        .temp{
+            text-align: center;
+        }
+
+        .weather-icon{
+            @include breakpoint(mobile){
+                width:60px;
+            }
         }
         
         .wind, .precipitations{
@@ -212,5 +229,9 @@ section{
             text-align: center;
         }
     }
+}
+
+.daily-forecast{
+    background-color: lighten($color: $accent_color, $amount: 10%);
 }
 

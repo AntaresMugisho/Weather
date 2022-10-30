@@ -49,7 +49,7 @@ html {
 }
 
 nav {
-  background-color: #3b3b3b;
+  background-color: #2e2e2e;
   position: fixed;
   top: 0;
   width: 100%;
@@ -106,7 +106,7 @@ nav {
   }
   .humburger:hover {
     background-color: #fff;
-    color: #3b3b3b;
+    color: #2e2e2e;
   }
 }
 
@@ -119,15 +119,19 @@ section {
   }
 }
 
+section:nth-last-child(1) {
+  padding-bottom: 5rem;
+}
+
 footer {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   gap: 1.6rem;
-  background-color: #3b3b3b;
+  background-color: #2e2e2e;
   color: #fff;
-  padding: 2rem 10%;
+  padding: 4rem 10%;
 }
 @media screen and (max-width: 480px) {
   footer {
@@ -168,13 +172,14 @@ footer {
 }
 .hero .main-title {
   color: #fff;
-  background-color: rgba(0, 0, 0, 0.2);
-  font-size: 3.4rem;
+  font-size: 5.56rem;
   font-weight: 300;
-  padding: 100% 10%;
+  padding: 0 10%;
 }
 @media screen and (max-width: 480px) {
   .hero .main-title {
+    background-color: rgba(0, 0, 0, 0.2);
+    font-size: 3.4rem;
     padding: 40px 5%;
   }
 }
@@ -212,7 +217,7 @@ footer {
 }
 .form-container button {
   background-color: #f19d00;
-  color: #3b3b3b;
+  color: #2e2e2e;
   width: 30px;
   height: 30px;
   border-radius: 50%;
@@ -251,12 +256,13 @@ footer {
 
 section .title {
   font-size: 2.4rem;
-  color: #3b3b3b;
+  color: #2e2e2e;
+  margin-bottom: 20px;
 }
 section .title::after {
   content: "";
   display: block;
-  height: 4px;
+  height: 3px;
   width: 40%;
   background-color: #f19d00;
 }
@@ -275,22 +281,12 @@ section .title::after {
 .wrapper .container .desc {
   font-weight: 200;
 }
-.wrapper .container .description {
-  font-size: 2rem;
-  padding: 12px;
-}
-@media screen and (max-width: 480px) {
-  .wrapper .container .description {
-    background-color: #fffaf1;
-    border-radius: 6px;
-  }
-}
 .wrapper .container .card {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border: 1px solid #eeeeee;
+  border: 1px solid #e1e1e1;
   border-radius: 6px;
   padding: 6px;
   width: 100%;
@@ -311,6 +307,7 @@ section .title::after {
 }
 .wrapper .container .card .details {
   margin-top: 8px;
+  width: 100%;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 5px;
@@ -322,39 +319,65 @@ section .title::after {
   align-items: center;
   font-size: 2rem;
   background-color: #f3f3f3;
-  padding: 3px;
+  padding: 8px 4px;
   border-radius: 3px;
   height: 100%;
 }
 .wrapper .container .card .details div p {
   text-align: center;
 }
+.wrapper .container .description {
+  font-size: 2rem;
+  padding: 12px;
+  background-color: #fdfbdf;
+  border-radius: 6px;
+}
 
+.forecast .title {
+  width: max-content;
+}
 .forecast .card {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   justify-content: space-between;
-  margin: 12px 0;
   display: flex;
-  align-items: flex-start;
-  border-bottom: 1px solid #bbbbbb;
+  align-items: center;
+  gap: 2px;
+}
+.forecast .card:not(:nth-last-child(1)) {
+  margin: 12px 0;
+  border-bottom: 1px solid #e1e1e1;
 }
 .forecast .card .hour, .forecast .card .temp {
   font-size: 2.4rem;
-  color: #3b3b3b;
-  max-width: 100px;
+  color: #2e2e2e;
+}
+@media screen and (max-width: 480px) {
+  .forecast .card .hour, .forecast .card .temp {
+    max-width: 100px;
+  }
 }
 .forecast .card .hour span.description, .forecast .card .hour span.feels-like, .forecast .card .temp span.description, .forecast .card .temp span.feels-like {
   display: block;
   font-size: 1.8rem;
   font-weight: 200;
+  margin-top: 4px;
 }
-.forecast .card .demo-icon {
-  width: 60px;
+.forecast .card .temp {
+  text-align: center;
+}
+@media screen and (max-width: 480px) {
+  .forecast .card .weather-icon {
+    width: 60px;
+  }
 }
 .forecast .card .wind, .forecast .card .precipitations {
   font-size: 2rem;
   text-align: center;
+}
+
+.daily-forecast {
+  background-color: #fdfbdf;
 }
