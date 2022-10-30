@@ -1,18 +1,18 @@
 <?php
 
     require "../vendor/autoload.php";
-    require "../private/index.php";
+    use App\Router;
 
-    $city = "Bujumbura";
-    $lang = "fr";
-    $url = "http://api.openweathermap.org/data/2.5/forecast?q={$city}&lang={$lang}&appid=". API_KEY;
-
-    // $json = file_get_contents($url);
-    $json = file_get_contents("../private/data.json");
-    $data = json_decode($json);
-
-    require_once "../templates/layout.php";
+    // Error reporter
+    $whoops = new \Whoops\Run;
+    $whoops->pushHandler(new \Whoops\Handler\PrettyPageHandler);
+    $whoops->register();
 
 
-    
+    // Router
+    $TEMPLATE_PATH = dirname(__DIR__) . "/templates/";
 
+    $router = new Router($TEMPLATE_PATH);
+    $router
+        ->get("/", "homepage", "home")
+        ->run();

@@ -1,3 +1,11 @@
+<?php
+
+use App\Model\Forecast;
+
+$forecast = new Forecast;
+
+
+?>
 
 
 <div class="form-container">
@@ -53,6 +61,7 @@
 </section>
 
 <!-- 3 Hours forecast -->
+
 <section class="forecast">
     <h3 class="title">Prévisions à 3 heures</h3>
 

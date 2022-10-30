@@ -23,10 +23,7 @@
     </header>
 
     <main>
-        <?php 
-            require "./homepage.php";
-        ?>
-
+        <?= $content;?>
     </main>
 
     <footer>
