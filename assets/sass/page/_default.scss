@@ -3,7 +3,7 @@
     background-image:url(../../images/pexels-lisa-fotios-1107717.jpg);
     @include fit_background();
     // background-attachment: fixed;
-    @include flex_start();
+    @include flex_start;
     height:60vh;
     margin-top: 60px;
 
@@ -14,8 +14,8 @@
     .main-title{
         color:#fff;
         background-color: rgba(0, 0, 0, 0.2);
-        font-size: fontSize(level_2);
-        font-weight: 200;
+        font-size: fontSize(level_3);
+        font-weight: 300;
         padding: 100% $marge;
 
         @include breakpoint(mobile){
@@ -25,7 +25,7 @@
 }
 
 .form-container{
-    @include flex_center();
+    @include flex_center;
     background-color:#f2f2f2;
     padding:24px $marge;
     
@@ -63,6 +63,11 @@
 
         &:hover{
             background-color:#333;
+        }
+
+        i{
+            color:#fff;
+            font-size:2.1rem;
         }
     }
 }
@@ -127,44 +132,85 @@ section{
         font-size: fontSize(normal);
         padding:12px;
         @include breakpoint(mobile){
-            background-color: lighten($secondary_color, 46%);
+            background-color: lighten($secondary_color, 50%);
+            border-radius:6px;
         }
     }
 
     .card{
         @include flex_center(column);
         border:1px solid lighten($primary-color, 70%);
+        border-radius:6px;
         padding:6px;
         width:100%;
 
         .card-header{
-            @include flex_center();
+            @include flex_center;
             gap:12px;
         }
 
         .temp{
             font-size: fontSize(level_2);
+
+            span{
+                display:block;
+                font-size: fontSize(normal);
+            }
         }
     }
 
     .card .details{
-        @include flex_center();
-        justify-content:space-evenly;
+        // justify-content:space-evenly;
         margin-top:8px;
+        display:grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap:5px;
        
 
-        p{
+        div{
+            @include flex_center(column);
             font-size: fontSize(normal);
             background-color: #f3f3f3;
             padding:3px;
             border-radius: 3px;
-            width:20%;
+            height:100%;
+
+            p{
+                text-align: center;
+            }
         }
     }   
 }
 
 .forecast{
     .card{
-    
+        @include flex_center;
+        justify-content: space-between;
+        margin:12px 0;
+        display: flex;
+        align-items:flex-start;
+        border-bottom: 1px solid lighten($color: $primary_color, $amount: 50%);
+
+        .hour, .temp{
+            font-size: fontSize(level_4);
+            color:$primary-color;
+            max-width:100px;
+
+            span.description, span.feels-like{
+                display:block;
+                font-size:1.8rem;
+                font-weight:200;
+            }
+        }
+
+        .demo-icon{
+            width:60px;
+        }
+        
+        .wind, .precipitations{
+            font-size: 2rem;
+            text-align: center;
+        }
     }
 }
+

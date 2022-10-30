@@ -169,8 +169,8 @@ footer {
 .hero .main-title {
   color: #fff;
   background-color: rgba(0, 0, 0, 0.2);
-  font-size: 5.56rem;
-  font-weight: 200;
+  font-size: 3.4rem;
+  font-weight: 300;
   padding: 100% 10%;
 }
 @media screen and (max-width: 480px) {
@@ -220,6 +220,10 @@ footer {
 }
 .form-container button:hover {
   background-color: #333;
+}
+.form-container button i {
+  color: #fff;
+  font-size: 2.1rem;
 }
 
 .wrapper .tabs {
@@ -277,7 +281,8 @@ section .title::after {
 }
 @media screen and (max-width: 480px) {
   .wrapper .container .description {
-    background-color: #fff3dd;
+    background-color: #fffaf1;
+    border-radius: 6px;
   }
 }
 .wrapper .container .card {
@@ -286,6 +291,7 @@ section .title::after {
   justify-content: center;
   align-items: center;
   border: 1px solid #eeeeee;
+  border-radius: 6px;
   padding: 6px;
   width: 100%;
 }
@@ -299,18 +305,56 @@ section .title::after {
 .wrapper .container .card .temp {
   font-size: 5.56rem;
 }
+.wrapper .container .card .temp span {
+  display: block;
+  font-size: 2rem;
+}
 .wrapper .container .card .details {
+  margin-top: 8px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 5px;
+}
+.wrapper .container .card .details div {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  justify-content: space-evenly;
-  margin-top: 8px;
-}
-.wrapper .container .card .details p {
   font-size: 2rem;
   background-color: #f3f3f3;
   padding: 3px;
   border-radius: 3px;
-  width: 20%;
+  height: 100%;
+}
+.wrapper .container .card .details div p {
+  text-align: center;
+}
+
+.forecast .card {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-between;
+  margin: 12px 0;
+  display: flex;
+  align-items: flex-start;
+  border-bottom: 1px solid #bbbbbb;
+}
+.forecast .card .hour, .forecast .card .temp {
+  font-size: 2.4rem;
+  color: #3b3b3b;
+  max-width: 100px;
+}
+.forecast .card .hour span.description, .forecast .card .hour span.feels-like, .forecast .card .temp span.description, .forecast .card .temp span.feels-like {
+  display: block;
+  font-size: 1.8rem;
+  font-weight: 200;
+}
+.forecast .card .demo-icon {
+  width: 60px;
+}
+.forecast .card .wind, .forecast .card .precipitations {
+  font-size: 2rem;
+  text-align: center;
 }
