@@ -8,7 +8,6 @@
     $whoops->pushHandler(new \Whoops\Handler\PrettyPageHandler);
     $whoops->register();
 
-
     // Router
     $TEMPLATE_PATH = dirname(__DIR__) . "/templates/";
 

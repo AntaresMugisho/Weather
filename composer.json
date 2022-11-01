@@ -16,7 +16,8 @@
     ],
     "require-dev": {
         "filp/whoops": "^2.14",
-        "symfony/var-dumper": "^6.1"
+        "symfony/var-dumper": "^6.1",
+        "phpunit/phpunit": "^9.5"
     },
     "require": {
         "altorouter/altorouter": "^2.0"

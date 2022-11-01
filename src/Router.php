@@ -3,7 +3,6 @@
 namespace App;
 
 use \AltoRouter;
-use Exception;
 
 class Router{
 
@@ -16,7 +15,7 @@ class Router{
         $this->template_path = $template_path;
     }
 
-    public function get(string $slug, string $target, string $name = null): self
+    public function get(string $slug, string $target, ?string $name = null): self
     {
         $this->router->map("GET", $slug, $target, $name);
         return $this;
