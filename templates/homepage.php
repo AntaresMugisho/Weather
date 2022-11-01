@@ -1,6 +1,7 @@
 <?php
 
 use App\Helpers\DateTranslater;
+use App\Helpers\WeatherTranslater;
 use App\Model\Forecast;
 
 // $forecast = (new Forecast("Bujumbura"))->getForecast();
@@ -26,7 +27,7 @@ $days = $forecast->getDays();
         <button class="tab active">Aujourd'hui</button>
 
         <?php foreach($days as $day): ?>
-        <button class="tab"><?= DateTranslater::shortFormat($day["date"]) ?></button>
+        <button class="tab"><?= DateTranslater::translateDay($day["date"], true) ?></button>
         <?php endforeach;?>
         
     </div>
@@ -35,7 +36,7 @@ $days = $forecast->getDays();
         <h3 class="title"><?= $forecasts[0]["date"]->format("d M Y")?><span> à <?= $city ?></span> </h3>
 
         <h3>
-            <span class="name"><?=$forecasts[0]["weather"]?> &bull;</span>&nbsp;&nbsp;<span class="desc"><?=$forecasts[0]["description"]?></span>
+            <span class="name"><?= WeatherTranslater::traslateWeather($forecasts[0]["weather"])?> &bull;</span>&nbsp;&nbsp;<span class="desc"><?=$forecasts[0]["description"]?></span>
         </h3>
 
 
@@ -113,7 +114,7 @@ $days = $forecast->getDays();
     ?>
     
     <div class="card">
-        <p class="hour"><?= $day["date"]->format("l d M")?>
+        <p class="hour"><?= DateTranslater::translateDay($day["date"]) . $day["date"]->format(" d M")?>
             <span class="description"><?= $description?></span>
         </p>
 

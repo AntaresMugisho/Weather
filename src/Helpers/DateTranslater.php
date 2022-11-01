@@ -6,7 +6,7 @@ use DateTime;
 
 class DateTranslater{
 
-    public static function shortFormat(DateTime $date)        
+    public static function translateDay(DateTime $date, bool $longform = false)        
     {
         $days = [
             "Mon" => "Lun",
@@ -25,7 +25,10 @@ class DateTranslater{
             "Saturday"  => "Samedi",
             "Sunday"    => "Dimanche",
         ];
-
-        return $days[$date->format("l") ?? $date->format("D")];
+        
+        if ($longform){
+            return $days[$date->format("l")];
+        }
+        return $days[$date->format("D")];
     }
 }
