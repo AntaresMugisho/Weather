@@ -1,14 +1,9 @@
 
 
 section{
-    padding:5rem $marge 0;
+    padding:5rem $marge 5rem;
 
     @include breakpoint(mobile){
-        padding:5rem 5% 0;
+        padding:5rem 5% 5rem;
     }
-}
-
-section:nth-last-child(1){
-    padding-bottom:5rem;
-
 }

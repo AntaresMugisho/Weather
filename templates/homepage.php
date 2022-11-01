@@ -1,5 +1,6 @@
 <?php
 
+use App\Helpers\DateTranslater;
 use App\Model\Forecast;
 
 // $forecast = (new Forecast("Bujumbura"))->getForecast();
@@ -25,13 +26,13 @@ $days = $forecast->getDays();
         <button class="tab active">Aujourd'hui</button>
 
         <?php foreach($days as $day): ?>
-        <button class="tab"><?= $day["date"]->format("l")?></button>
+        <button class="tab"><?= DateTranslater::shortFormat($day["date"]) ?></button>
         <?php endforeach;?>
         
     </div>
 
     <div class="container">
-        <h3 class="title"><?= $forecasts[0]["date"]->format("d M Y")?> <span>à <?= $city ?></span> </h3>
+        <h3 class="title"><?= $forecasts[0]["date"]->format("d M Y")?><span> à <?= $city ?></span> </h3>
 
         <h3>
             <span class="name"><?=$forecasts[0]["weather"]?> &bull;</span>&nbsp;&nbsp;<span class="desc"><?=$forecasts[0]["description"]?></span>

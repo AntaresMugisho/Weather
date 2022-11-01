@@ -107,6 +107,10 @@ section{
         color: $primary-color;
         margin-bottom:20px;
 
+        span{
+            font-weight: 300;
+        }
+
         &::after{
             content:"";
             display: block;
@@ -124,6 +128,7 @@ section{
 
     .name, .desc{
         font-size:fontSize(level_4);
+        font-weight:400;
     }
 
     .desc{
@@ -174,6 +179,7 @@ section{
     }
     
     .description{
+        display: none;
         font-size: fontSize(normal);
         padding:12px;
         background-color: lighten($accent_color, 10%);
