@@ -4,20 +4,22 @@ use App\Helpers\DateTranslater;
 use App\Helpers\WeatherTranslater;
 use App\Model\Forecast;
 
-// $forecast = (new Forecast("Bujumbura"))->getForecast();
-$forecast = new Forecast("Bujumbura");
 
-$city = $forecast->getCity();
+$city = (isset($_GET["q"]) && !empty($_GET["q"])) ? ($_GET["q"]) : "Bujumbura";
+
+$forecast = new Forecast($city);
+
 $forecasts = $forecast->getForecast();
-
 $days = $forecast->getDays();
+$city = $forecast->getCity();
+
 ?>
 
 <div class="form-container">
-    <form action="" method="">
+    <form action="" method="GET">
         <div class="input-control">
             <input type="search" name="q" placeholder="Rechercher une ville, un pays">
-            <button><i class="bi bi-search"></i></button>
+            <button type="submit"><i class="bi bi-search"></i></button>
         </div>
     </form>
 </div>

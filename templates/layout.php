@@ -13,8 +13,8 @@
     <header>
         <nav>
             <a href="#" class="nav-brand">Weather<span>App</span></a>
-            <a href="#" class="nav-link">About</a>
-            <a href="#" class="humburger">i</a>
+            <a href="https://github.com/AntaresMugisho/Weather" class="nav-link">About</a>
+            <a href="https://github.com/AntaresMugisho/Weather" class="humburger">i</a>
         </nav>
 
         <div class="hero">

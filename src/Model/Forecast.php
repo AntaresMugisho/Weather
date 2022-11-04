@@ -15,9 +15,11 @@ class Forecast{
         $city = $city;
         $lang = $lang;
         $json = "http://api.openweathermap.org/data/2.5/forecast?q={$city}&units=metric&lang={$lang}&appid=". API_KEY;
+        $json = file_get_contents($json, true);
 
-        $json = file_get_contents(dirname(__DIR__, 2) . "/private/data.json");
-        
+        // Using local file for tests
+        // $json = file_get_contents(dirname(__DIR__, 2) . "/private/data.json");
+
         $this->data = json_decode($json, true);
     }
 
