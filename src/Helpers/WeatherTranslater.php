@@ -4,7 +4,7 @@ namespace App\Helpers;
 
 class WeatherTranslater{
 
-    public static function traslateWeather(string $key)
+    public static function translateWeather(string $key)
     {
         $weathers = [
             "Clouds" => "Nuageux",
