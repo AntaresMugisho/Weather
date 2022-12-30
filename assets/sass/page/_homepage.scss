@@ -18,7 +18,7 @@
         padding: 0 $marge;
 
         @include breakpoint(mobile){
-            background-color: rgba(0, 0, 0, 0.2);
+            background-color: rgba(0, 0, 0, 0.4);
             font-size: fontSize(level_3);  
             padding: 40px 5%;
         }
