@@ -9,4 +9,4 @@ This is what it looks like
 ![Preview sreenshot](https://github.com/AntaresMugisho/Weather/blob/main/images/preview0.png?raw=true)
 
 # Take a look
- http://weathapp.epizy.com
+ https://weathapp.epizy.com
